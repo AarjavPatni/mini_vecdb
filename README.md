@@ -8,7 +8,7 @@
 
 # Distance Algorithm
 
-- I implemented the Cosine distance algorithm using the advice from (this)[https://www.singlestore.com/blog/distance-metrics-in-machine-learning-simplfied/#how-vector-similarity-search-is-calculated] blog post by SingleStore, a well-known
+- I implemented the Cosine distance algorithm using the advice from [this](https://www.singlestore.com/blog/distance-metrics-in-machine-learning-simplfied/#how-vector-similarity-search-is-calculated) blog post by SingleStore, a well-known
 data platform.
 - It mentions that the Cosine algorithm is "particularly useful in fields like text analysis and information retrieval", which is integral to search engines.
 
