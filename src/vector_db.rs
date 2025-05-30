@@ -1,23 +1,21 @@
-use std::error::Error;
+use std::{collections::HashMap, error::Error};
 
-type Embedding = [f32; 1024];
+use nalgebra::SVector;
 
-pub struct VectorDB {
-    id: String,
-    embedding: Embedding,
+type Embedding = SVector<f32, 1024>;
+type VectorDB = HashMap<String, Embedding>;
+
+fn distance(e1: &Embedding, e2: &Embedding) -> f32 {
+    e1.dot(e2) / (e1.norm() * e2.norm())
 }
 
-impl VectorDB {
-    fn distance() -> f32 {
-        todo!()
-    }
+pub fn search(db: VectorDB, query: Embedding, k: usize) -> Result<Vec<Embedding>, String> {
+    // goal: find the top-k results.
+    todo!()
+}
 
-    pub fn search(target: Embedding, k: usize) -> Result<Vec<Embedding>, String> {
-        todo!()
-    }
-
-    pub fn store() -> Result<(), String> {
-        todo!()
-    }
+pub fn store(db: VectorDB, embedding: Embedding) -> Result<(), String> {
+    // goal: push embedding into db
+    todo!()
 }
 
